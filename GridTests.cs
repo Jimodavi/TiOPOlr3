@@ -78,7 +78,6 @@ namespace lr3.Tests
             }
         }
 
-
         [TestMethod()]
         public void GridIncCellTest()
         {
@@ -100,6 +99,29 @@ namespace lr3.Tests
                 throw new AssertFailedException("Сбой увеличения значения ячейки сетки. Ожидается " + expected + ". Фактически " + actual[cell_row, cell_column] + " .");
             }
         }
+
+        [TestMethod()]
+        public void GridIncPastMaxCellTest()
+        {
+            int expected = Grid.mine_value;
+            int rows = 7;
+            int columns = 7;
+            Grid actual = new Grid(rows, columns);
+            int cell_row = 3;
+            int cell_column = 0;
+            actual[cell_row, cell_column] = expected;
+            actual.IncCell(cell_row, cell_column);
+
+            try
+            {
+                Assert.AreEqual(expected, actual[cell_row, cell_column]);
+            }
+            catch (Exception)
+            {
+                throw new AssertFailedException("Сбой увеличения значения ячейки сетки больше максимума. Ожидается " + expected + ". Фактически " + actual[cell_row, cell_column] + " .");
+            }
+        }
+
 
     }
 }
