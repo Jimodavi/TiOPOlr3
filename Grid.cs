@@ -11,6 +11,7 @@ namespace lr3
         public readonly int rows;
         public readonly int columns;
         public readonly int[,] cells;
+        public const int mine_value = 9;
 
         public Grid()
         {
@@ -35,9 +36,9 @@ namespace lr3
             // Метод увеличивающий значение клетки сетки на 1, если значение не максимальное
             // row - строка сетки
             // column - столбец сетки
-            // todo реализовать метод позднее до конца
-            var currentValue = this[row, column];
-            this[row, column] = currentValue + 1;
+            var current_value = this[row, column];
+            if (current_value == mine_value) return; 
+            this[row, column] = current_value + 1;
         }
     }
 }
