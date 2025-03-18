@@ -278,7 +278,7 @@ namespace lr3.Tests
             }
             catch (IndexOutOfRangeException)
             {
-                throw new AssertFailedException("Сбой увеличения значения сосендней ячейки справа вне границ. Ожидается остановка обращения к индексу вне границ сетки.");
+                throw new AssertFailedException("Сбой увеличения значения сосендней ячейки справа снизу вне границ. Ожидается остановка обращения к индексу вне границ сетки.");
             }
         }
 
@@ -302,5 +302,6 @@ namespace lr3.Tests
                 throw new AssertFailedException("Сбой увеличения значения сосендней ячейки снизу. Ожидается " + expected + ". Фактически " + actual[cell_row + 1, cell_column] + " .");
             }
         }
+
     }
 }
