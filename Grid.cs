@@ -8,13 +8,15 @@ namespace lr3
 {
     public class Grid
     {
+        public readonly int rows;
+
         public Grid()
         {
 
         }
         public Grid(int rows, int columns)
         {
-
+            this.rows = rows;
         }
     }
 }
