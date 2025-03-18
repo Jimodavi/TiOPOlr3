@@ -183,5 +183,23 @@ namespace lr3.Tests
             }
         }
 
+        [TestMethod()]
+        public void GridOutOfRangeRightUpAdjacentIncTest()
+        {
+            int rows = 42;
+            int columns = 76;
+            Grid actual = new Grid(rows, columns);
+            int cell_row = 36;
+            int cell_column = 75;
+
+            try
+            {
+                actual.RightUpAdjacentInc(cell_row, cell_column);
+            }
+            catch (IndexOutOfRangeException e)
+            {
+                throw new AssertFailedException("Сбой увеличения значения сосендней ячейки справа сверху вне границ. Ожидается остановка обращения к индексу вне границ сетки.");
+            }
+        }
     }
 }
