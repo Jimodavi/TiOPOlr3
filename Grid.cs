@@ -26,10 +26,8 @@ namespace lr3
 
         public int this[int row, int column]
         {
-            //todo реализовать метод get позднее до конца
-            get { return 9; }
-            //todo реализовать метод set позднее до конца
-            set { }
+            get { return cells[row, column]; }
+            set { cells[row, column] = value; }
         }
     }
 }
