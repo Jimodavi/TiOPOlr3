@@ -77,5 +77,29 @@ namespace lr3.Tests
                 throw new AssertFailedException("Сбой получения значения ячейки сетки. Ожидается " + expected + ". Фактически " + actual[cell_row,cell_column] + " .");
             }
         }
+
+
+        [TestMethod()]
+        public void GridIncCellTest()
+        {
+            int expected = 3;
+            int rows = 5;
+            int columns = 4;
+            Grid actual = new Grid(rows, columns);
+            int cell_row = 2;
+            int cell_column = 2;
+            actual[cell_row, cell_column] = expected - 1;
+            actual.IncCell(cell_row, cell_column);
+
+            try
+            {
+                Assert.AreEqual(expected, actual[cell_row, cell_column]);
+            }
+            catch (Exception)
+            {
+                throw new AssertFailedException("Сбой увеличения значения ячейки сетки. Ожидается " + expected + ". Фактически " + actual[cell_row, cell_column] + " .");
+            }
+        }
+
     }
 }
