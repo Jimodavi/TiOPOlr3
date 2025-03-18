@@ -29,5 +29,15 @@ namespace lr3
             get { return cells[row, column]; }
             set { cells[row, column] = value; }
         }
+
+        public void IncCell(int row, int column)
+        {
+            // Метод увеличивающий значение клетки сетки на 1, если значение не максимальное
+            // row - строка сетки
+            // column - столбец сетки
+            // todo реализовать метод позднее до конца
+            var currentValue = this[row, column];
+            this[row, column] = currentValue + 1;
+        }
     }
 }
