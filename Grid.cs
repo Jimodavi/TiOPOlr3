@@ -9,6 +9,7 @@ namespace lr3
     public class Grid
     {
         public readonly int rows;
+        public readonly int columns;
 
         public Grid()
         {
@@ -17,6 +18,7 @@ namespace lr3
         public Grid(int rows, int columns)
         {
             this.rows = rows;
+            this.columns = columns;
         }
     }
 }
