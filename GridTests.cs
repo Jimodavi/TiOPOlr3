@@ -17,5 +17,14 @@ namespace lr3.Tests
             Grid actual = new Grid();
             Assert.IsNotNull(actual, "Сбой создания сетки. Ожидается not null объект класса.");
         }
+
+        [TestMethod()]
+        public void GridCreationWithParamsTest()
+        {
+            int expected_rows = 6;
+            int expected_columns = 6;
+            Grid actual = new Grid(expected_rows,expected_columns);
+            Assert.IsNotNull(actual, "Сбой создания сетки c аргументами. Ожидается not null объект класса.");
+        }
     }
 }
