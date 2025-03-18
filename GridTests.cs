@@ -170,7 +170,7 @@ namespace lr3.Tests
             int columns = 25;
             Grid actual = new Grid(rows, columns);
             int cell_row = 25;
-            int cell_column = 42;
+            int cell_column = 12;
 
             try
             {
