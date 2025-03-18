@@ -262,5 +262,24 @@ namespace lr3.Tests
                 throw new AssertFailedException("Сбой увеличения значения сосендней ячейки справа снизу. Ожидается " + expected + ". Фактически " + actual[cell_row + 1, cell_column + 1] + " .");
             }
         }
+
+        [TestMethod()]
+        public void GridOutOfRangeRightDownAdjacentIncTest()
+        {
+            int rows = 64;
+            int columns = 84;
+            Grid actual = new Grid(rows, columns);
+            int cell_row = 63;
+            int cell_column = 33;
+
+            try
+            {
+                actual.RightDownAdjacentInc(cell_row, cell_column);
+            }
+            catch (IndexOutOfRangeException)
+            {
+                throw new AssertFailedException("Сбой увеличения значения сосендней ячейки справа вне границ. Ожидается остановка обращения к индексу вне границ сетки.");
+            }
+        }
     }
 }
