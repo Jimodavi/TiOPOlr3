@@ -41,5 +41,20 @@ namespace lr3.Tests
                 throw new AssertFailedException("Сбой получения строк сетки. Ожидается " + expected_rows + "строк. Фактически " + actual.rows + " строк.");
             }
         }
+
+        [TestMethod()]
+        public void GridGetColumnTest()
+        {
+            int expected_columns = 7;
+            Grid actual = new Grid(expected_columns, expected_columns);
+            try
+            {
+                Assert.AreEqual(expected_columns, actual.columns);
+            }
+            catch (Exception)
+            {
+                throw new AssertFailedException("Сбой получения столбцов сетки. Ожидается " + expected_columns + "столбцов. Фактически " + actual.columns + " столбцов.");
+            }
+        }
     }
 }
