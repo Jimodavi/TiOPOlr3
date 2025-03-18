@@ -11,6 +11,10 @@ namespace lr3
         public Grid()
         {
 
-        } 
+        }
+        public Grid(int rows, int columns)
+        {
+
+        }
     }
 }
