@@ -65,5 +65,10 @@ namespace lr3
         {
             if (row < rows - 1) IncCell(row + 1, column);
         }
+
+        public void LeftDownAdjacentInc(int row, int column)
+        {
+            if (row < rows - 1 && column > 0) IncCell(row + 1, column);
+        }
     }
 }
