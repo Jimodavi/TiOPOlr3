@@ -334,12 +334,12 @@ namespace lr3.Tests
 
             try
             {
-                actual.DownAdjacentInc(cell_row, cell_column);
-                Assert.AreEqual(expected, actual[cell_row + 1, cell_column]);
+                actual.LeftDownAdjacentInc(cell_row, cell_column);
+                Assert.AreEqual(expected, actual[cell_row + 1, cell_column - 1]);
             }
             catch (Exception)
             {
-                throw new AssertFailedException("Сбой увеличения значения сосендней ячейки снизу. Ожидается " + expected + ". Фактически " + actual[cell_row + 1, cell_column] + " .");
+                throw new AssertFailedException("Сбой увеличения значения сосендней ячейки слева снизу. Ожидается " + expected + ". Фактически " + actual[cell_row + 1, cell_column - 1] + " .");
             }
         }
 
