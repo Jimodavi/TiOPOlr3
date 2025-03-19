@@ -196,9 +196,9 @@ namespace lr3.Tests
             {
                 actual.RightUpAdjacentInc(cell_row, cell_column);
             }
-            catch (IndexOutOfRangeException e)
+            catch (IndexOutOfRangeException)
             {
-                throw new AssertFailedException("Сбой увеличения значения сосендней ячейки справа сверху вне границ. Ожидается остановка обращения к индексу вне границ сетки.");
+                throw new AssertFailedException("Сбой увеличения значения соседней ячейки справа сверху вне границ. Ожидается остановка обращения к индексу вне границ сетки.");
             }
         }
 
