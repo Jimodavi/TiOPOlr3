@@ -126,7 +126,7 @@ namespace lr3.Tests
         public void GridUpAdjacentIncTest()
         {
             int expected = 1;
-            int rows = 5;
+            int rows = 4;
             int columns = 4;
             Grid actual = new Grid(rows, columns);
             int cell_row = 2;
@@ -139,7 +139,7 @@ namespace lr3.Tests
             }
             catch (Exception)
             {
-                throw new AssertFailedException("Сбой увеличения значения сосендней ячейки сверху. Ожидается " + expected + ". Фактически " + actual[cell_row-1, cell_column] + " .");
+                throw new AssertFailedException("Сбой увеличения значения соседней ячейки сверху. Ожидается " + expected + ". Фактически " + actual[cell_row-1, cell_column] + " .");
             }
         }
 
