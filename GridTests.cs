@@ -259,7 +259,7 @@ namespace lr3.Tests
             }
             catch (Exception)
             {
-                throw new AssertFailedException("Сбой увеличения значения сосендней ячейки справа снизу. Ожидается " + expected + ". Фактически " + actual[cell_row + 1, cell_column + 1] + " .");
+                throw new AssertFailedException("Сбой увеличения значения соседней ячейки справа снизу. Ожидается " + expected + ". Фактически " + actual[cell_row + 1, cell_column + 1] + " .");
             }
         }
 
