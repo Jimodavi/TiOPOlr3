@@ -398,7 +398,7 @@ namespace lr3.Tests
             }
             catch (IndexOutOfRangeException)
             {
-                throw new AssertFailedException("Сбой увеличения значения сосендней ячейки слева вне границ. Ожидается остановка обращения к индексу вне границ сетки.");
+                throw new AssertFailedException("Сбой увеличения значения соседней ячейки слева вне границ. Ожидается остановка обращения к индексу вне границ сетки.");
             }
         }
 
