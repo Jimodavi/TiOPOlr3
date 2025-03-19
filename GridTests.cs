@@ -322,5 +322,26 @@ namespace lr3.Tests
             }
         }
 
+        [TestMethod()]
+        public void GridLeftDownAdjacentIncTest()
+        {
+            int expected = 1;
+            int rows = 69;
+            int columns = 21;
+            Grid actual = new Grid(rows, columns);
+            int cell_row = 57;
+            int cell_column = 2;
+
+            try
+            {
+                actual.DownAdjacentInc(cell_row, cell_column);
+                Assert.AreEqual(expected, actual[cell_row + 1, cell_column]);
+            }
+            catch (Exception)
+            {
+                throw new AssertFailedException("Сбой увеличения значения сосендней ячейки снизу. Ожидается " + expected + ". Фактически " + actual[cell_row + 1, cell_column] + " .");
+            }
+        }
+
     }
 }
